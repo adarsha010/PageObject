@@ -24,9 +24,9 @@ public class GooglePage {
 	public void login() {
 		WaitUtils.waitTillElementVisible(searchField);
 		searchField.sendKeys("India");
-		WaitUtils.waitTillElementClickable(googleSearchBTN);
-		googleSearchBTN.click();
-		WaitUtils.waitTillElementGetsInvisible(googleSearchBTN);
+		//WaitUtils.waitTillElementClickable(googleSearchBTN);
+		//googleSearchBTN.click();
+		//WaitUtils.waitTillElementGetsInvisible(googleSearchBTN);
 		
 	}
 	

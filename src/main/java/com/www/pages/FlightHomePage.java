@@ -65,13 +65,5 @@ public class FlightHomePage {
 		logger.info("Entered the value to To Field");
 		searchFlights.click();
 		logger.info("Click On Search Flights");
-		WaitUtils.waitTillElementVisible(searched_Resulta_Txt);
-		//SeleniumUtils.enterValue("fsc-destination-search","Genoa (GOA)");
-		//WaitUtils.waitTillElementClickable(firstPlace);
-		//SeleniumUtils.clickOnElemnet(firstPlace);
-		//SeleniumUtils.clickOnElemnet(firstPlace);
-		//firstPlace.click();
-		//SeleniumUtils.jsClick(firstPlace);
-		//WaitUtils.waitTillElementGetsInvisible(firstPlace);
 	}
 }

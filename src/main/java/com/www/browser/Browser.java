@@ -2,6 +2,7 @@ package com.www.browser;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,12 +16,15 @@ public class Browser {
 
 	
 	public static WebDriver driver;
-	
+	final static Logger logger = Logger.getLogger(Browser.class);
 	private Browser() {
 		
 		String browser = PropertyUtil.getProperty("browser");
 		String url = PropertyUtil.getProperty("URL");
-			
+		logger.info("Read value of browser:"+browser);
+		logger.info("Read value of application URL:" + url );
+		
+		
 		if(browser.equals("chrome")) {
 			System.getProperty("browser");
 			System.setProperty("webdriver.chrome.driver", ".//src/test/resources/chromedriver");
@@ -49,5 +53,7 @@ public class Browser {
 	public static void initialize() {
 		new Browser();
 	}
-	
+	public static void quitBrowsers() {
+		driver.quit();
+	}
 }

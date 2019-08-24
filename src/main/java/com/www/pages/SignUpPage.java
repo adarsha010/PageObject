@@ -1,5 +1,6 @@
 package com.www.pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,6 +11,8 @@ import com.www.utils.WaitUtils;
 
 public class SignUpPage {
 
+	final static Logger logger = Logger.getLogger(SignUpPage.class);
+	
 	@FindBy(id="email")
 	public WebElement userName;
 	
@@ -29,10 +32,12 @@ public class SignUpPage {
 		String pwd = PropertyUtil.getProperty("password");
 		WaitUtils.waitTillElementVisible(userName);
 		userName.sendKeys(un);
+		logger.info("UserName is entered in the field"+ un );
 		passwordField.sendKeys(pwd);
+		logger.info("Password is entered in the password edit field"+ un );
 		WaitUtils.waitTillElementClickable(subMit_BTN);
 		subMit_BTN.click();
-		
+		logger.info("Clicked on the submit button"+ un );
 	}
 	
 }

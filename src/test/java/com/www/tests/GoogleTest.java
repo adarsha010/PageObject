@@ -15,7 +15,7 @@ public class GoogleTest {
 	}
 	@AfterMethod
 	public void wrapUp() {
-		Browser.driver.quit();
+		Browser.quitBrowsers();
 	}
 	
 	@Test
