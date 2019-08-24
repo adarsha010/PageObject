@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.www.browser.Browser;
+import com.www.utils.SeleniumUtils;
 import com.www.utils.WaitUtils;
 
 public class GooglePage {
@@ -23,7 +24,7 @@ public class GooglePage {
 	
 	public void login() {
 		WaitUtils.waitTillElementVisible(searchField);
-		searchField.sendKeys("India");
+		SeleniumUtils.enterTextinField(searchField,"India");
 		//WaitUtils.waitTillElementClickable(googleSearchBTN);
 		//googleSearchBTN.click();
 		//WaitUtils.waitTillElementGetsInvisible(googleSearchBTN);

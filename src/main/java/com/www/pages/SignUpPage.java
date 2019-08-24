@@ -32,12 +32,12 @@ public class SignUpPage {
 		String pwd = PropertyUtil.getProperty("password");
 		WaitUtils.waitTillElementVisible(userName);
 		userName.sendKeys(un);
-		logger.info("UserName is entered in the field"+ un );
+		logger.info("UserName is entered in the field "+ un );
 		passwordField.sendKeys(pwd);
-		logger.info("Password is entered in the password edit field"+ un );
+		logger.info("Password is entered in the password edit field "+ pwd );
 		WaitUtils.waitTillElementClickable(subMit_BTN);
 		subMit_BTN.click();
-		logger.info("Clicked on the submit button"+ un );
+		logger.info("Clicked on the submit button");
 	}
 	
 }

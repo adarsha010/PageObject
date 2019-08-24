@@ -19,7 +19,7 @@ public class SeleniumUtils {
 		
 	public static void enterTextinField(WebElement ele,String value) {
 		ele.sendKeys(value);
-		logger.info(" Value is set in the text field");	
+		logger.info(" Value entered in text field and is " +value );	
 	}
 	
 	public static void jsClick(WebElement ele) {
