@@ -10,7 +10,7 @@ import com.www.utils.WaitUtils;
 
 public class GooglePage {
 
-	@FindBy(css="input[name='q'")
+	@FindBy(css="input[name='q']")
 	public WebElement searchField;
 	
 	@FindBy(xpath="(//input[@name='btnK'])[2]")
@@ -25,9 +25,6 @@ public class GooglePage {
 	public void login() {
 		WaitUtils.waitTillElementVisible(searchField);
 		SeleniumUtils.enterTextinField(searchField,"India");
-		//WaitUtils.waitTillElementClickable(googleSearchBTN);
-		//googleSearchBTN.click();
-		//WaitUtils.waitTillElementGetsInvisible(googleSearchBTN);
 		
 	}
 	
